@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Even OR Odd</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+body{
+background: #e6ffff;
+font-family: "Times New Roman", Times, serif;
+text-align: center;
+}
+.container{
+margin-top: 200px;
+}
+h2{
+color:  #004d4d;
+}
+
+button{
+background: #003333;
+color: white;
+}
+button:hover{
+background:#006666;
+}
+
+</style>
+</head>     
+<body>
+<div class="container">
+	<div class="row">
+		<div class= "col-lg-2 col-md-2 col-sm-1"></div>
+		<div class= "col-lg-8 col-md-8 col-sm-10">
+			<h3>Check the number is Even or Odd</h3>
+			<input type="number" placeholder="Enter Number" id="numberInput" required  aria-invalid="true">
+			<button onclick="myfunction()" type="submit" value="submit">Click</button>
+			<p id="output"></p>
+		</div>
+		<div class= "col-lg-2 col-md-2 col-sm-1"></div>
+	</div>
+</div>
+<script>
+
+function myfunction(){
+  const inputNumber = document.getElementById("numberInput").value;
+  const result = document.getElementById("output");
+	if(inputNumber === "" || !Number.isInteger(parseFloat(inputNumber))){
+	result.innerHTML = "Please Enter a Valid Number";
+	}
+
+  else if(inputNumber % 2 === 0){
+    result.innerHTML = "Number is Even";
+   }else{
+      result.innerHTML = "Number is Odd";
+    } 
+}
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
